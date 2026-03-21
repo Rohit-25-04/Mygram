@@ -36,11 +36,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { ArrowLeft } from "lucide-react";
 
- const socket = io(import.meta.env.VITE_API_URL, {
-  cors: {
-    origin: "*",
-  },
-});
+ const socket = io(import.meta.env.VITE_API_URL);
 
 function Chat() {
   const [users, setUsers] = useState([]);
