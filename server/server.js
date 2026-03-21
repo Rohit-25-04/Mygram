@@ -30,7 +30,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
  app.use(cors({
-  origin: ["https://my-gram-omega.vercel.app"], // yahan frontend URL
+  origin: ["https://mygram-88p6.vercel.app"], // yahan frontend URL
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -47,7 +47,7 @@ const server = createServer(app);
 // 🔥 Attach Socket.IO to that server
 const io = new Server(server, {
   cors: {
-     origin: ["https://my-gram-omega.vercel.app"],
+     origin: ["https://mygram-88p6.vercel.app"],
     methods: ["GET", "POST"]
   }
 });
