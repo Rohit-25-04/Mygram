@@ -36,7 +36,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { ArrowLeft } from "lucide-react";
 
-  const socket = io("https://incredible-warmth.up.railway.app");
+  const socket = io("https://mygram-production.up.railway.app");
 
 function Chat() {
   const [users, setUsers] = useState([]);
