@@ -29,7 +29,11 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+ app.use(cors({
+  origin: ["https://my-gram-omega.vercel.app"], // yahan frontend URL
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use("/", route);
 
 // MongoDB connection
@@ -43,6 +47,7 @@ const server = createServer(app);
 // 🔥 Attach Socket.IO to that server
 const io = new Server(server, {
   cors: {
+     origin: ["https://my-gram-omega.vercel.app"],
     methods: ["GET", "POST"]
   }
 });
