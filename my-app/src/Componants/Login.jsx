@@ -28,8 +28,8 @@ const navigate=useNavigate()
 e.preventDefault(); 
     try {
       const url = isLogin
-        ? "http://localhost:5000/login"
-        : "http://localhost:5000/signup";
+        ?  `${import.meta.env.VITE_API_URL}/login`
+        :  `${import.meta.env.VITE_API_URL}/signup`;
 
       const res = await axios.post(url, formData);
       console.log(res.data);

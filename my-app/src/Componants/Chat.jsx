@@ -36,7 +36,11 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { ArrowLeft } from "lucide-react";
 
-const socket = io("http://localhost:5000");
+ const socket = io(import.meta.env.VITE_API_URL, {
+  cors: {
+    origin: "*",
+  },
+});
 
 function Chat() {
   const [users, setUsers] = useState([]);
@@ -54,7 +58,7 @@ function Chat() {
     const fetchUsers = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/user/${myId}`,
+          `${import.meta.env.VITE_API_URL}/user/${myId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
