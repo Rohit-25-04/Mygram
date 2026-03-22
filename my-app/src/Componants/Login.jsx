@@ -29,7 +29,7 @@ e.preventDefault();
     try {
       const url = isLogin
         ?  `https://mygram-production-e1e0.up.railway.app/login`
-        :  `${import.meta.env.VITE_API_URL}/signup`;
+        :  `https://mygram-production-e1e0.up.railway.app/signup`;
 
       const res = await axios.post(url, formData);
       console.log(res.data);

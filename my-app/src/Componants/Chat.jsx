@@ -57,7 +57,7 @@ function Chat() {
     const fetchUsers = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/user/${myId}`,
+          `https://mygram-production-e1e0.up.railway.app/user/${myId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

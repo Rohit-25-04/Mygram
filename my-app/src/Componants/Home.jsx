@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/posts`,{
+      const res = await axios.get(`https://mygram-production-e1e0.up.railway.app/posts`,{
         headers:{
           Authorization:`Bearer ${token}`
         }
@@ -32,7 +32,7 @@ function Home() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/post`,
+      const res = await axios.post(`https://mygram-production-e1e0.up.railway.app/post`,
         formData,
         {
           headers: {

@@ -8,7 +8,7 @@ function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/profile`, {
+        const res = await axios.get(`https://mygram-production-e1e0.up.railway.app/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
