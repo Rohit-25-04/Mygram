@@ -36,7 +36,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { ArrowLeft } from "lucide-react";
 
- const socket = io("https://mygram-production.up.railway.app", {
+ const socket = io("https://mygram-production-e1e0.up.railway.app", {
   transports: ["polling"], // websocket skip karo abhi
   withCredentials: true
 });
