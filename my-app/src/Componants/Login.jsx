@@ -28,7 +28,7 @@ const navigate=useNavigate()
 e.preventDefault(); 
     try {
       const url = isLogin
-        ?  `${import.meta.env.VITE_API_URL}/login`
+        ?  `https://mygram-production-e1e0.up.railway.app/login`
         :  `${import.meta.env.VITE_API_URL}/signup`;
 
       const res = await axios.post(url, formData);
