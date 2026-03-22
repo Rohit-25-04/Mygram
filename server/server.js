@@ -21,7 +21,7 @@ import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
-import router from "./Routes/routes";
+import router from "./Routes/routes.js";
 import dotenv from "dotenv";
 dotenv.config();
 
