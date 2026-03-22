@@ -44,9 +44,15 @@ e.preventDefault();
       localStorage.setItem("username",res.data.user.Username)
       navigate("/home")
     } else {
-      alert("Signup Successful ✅, now login");
-      setIsLogin(true);
-      navigate("/")
+       setIsLogin(true);           // login form open
+      setFormData({               // clear signup form
+        Fullname: "",
+        Username: "",
+        Email: "",
+        Password: "",
+        ConfirmPassword: "",
+      });
+      alert("Signup Successful ✅, please login");
     }
     } catch (err) {
       console.log(err);
