@@ -35,6 +35,7 @@ router.post("/signup",async(req,res)=>{
     const password=await bcrypt.hash(Password,10)
     const newUser=new User({Fullname,Username,Email,Password:password})
     await newUser.save()
+    res.status(201).json({Message:"signup successfull",newUser})
 })
 router.post("/login",async(req,res)=>{
     const {Username,Password}=req.body
