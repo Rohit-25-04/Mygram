@@ -37,7 +37,7 @@ import { io } from "socket.io-client";
 import { ArrowLeft } from "lucide-react";
 
  const socket = io("https://mygram-production-e1e0.up.railway.app", {
-  transports: ["websoket"], // websocket skip karo abhi
+  transports: ["websocket"], // websocket skip karo abhi
   withCredentials: true
 });
 
