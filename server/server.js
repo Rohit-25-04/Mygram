@@ -37,7 +37,8 @@ const io = new Server(server, {
     origin: "https://mygram-88p6-cklfq3ppn-rohit-25-04s-projects.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
-  }
+  },
+  transports: ["polling"] 
 });
 
 io.on("connection", (socket) => {
