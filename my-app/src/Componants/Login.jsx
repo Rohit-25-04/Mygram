@@ -33,7 +33,7 @@ e.preventDefault();
 
       const res = await axios.post(url, formData);
       console.log(res.data);
-      alert("Success ✅");
+       
 
         if (isLogin) {
       // 🔹 Save token and user details
