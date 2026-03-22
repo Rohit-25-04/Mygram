@@ -46,6 +46,7 @@ e.preventDefault();
     } else {
       alert("Signup Successful ✅, now login");
       setIsLogin(true);
+      navigate("/")
     }
     } catch (err) {
       console.log(err);
