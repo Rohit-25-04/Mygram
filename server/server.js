@@ -21,11 +21,12 @@ import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
+import router from "./Routes/routes";
 import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-
+app.use(express.json())
 
 // CORS for REST APIs
 app.use(cors({
@@ -33,6 +34,8 @@ app.use(cors({
   credentials: true,
 }));
  mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo atlas is connected"))
+
+ app.use("/",router)
 
 const server = createServer(app);
 
