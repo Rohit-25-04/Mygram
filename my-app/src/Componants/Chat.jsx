@@ -76,7 +76,7 @@ function Chat() {
   // Receive message
   useEffect(() => {
     socket.on("receive_message", (data) => {
-       
+        setMessages((prev) => [...prev, data]);
     });
 
     return () => socket.off("receive_message");
