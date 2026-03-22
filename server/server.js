@@ -25,7 +25,7 @@ const app = express();
 
 // CORS for REST APIs
 app.use(cors({
-  origin: "https://mygram-88p6-obbx86ovf-rohit-25-04s-projects.vercel.app/",
+  origin: "https://mygram-88p6-obbx86ovf-rohit-25-04s-projects.vercel.app",
   credentials: true,
 }));
 
