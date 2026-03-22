@@ -77,6 +77,7 @@ function Chat() {
   useEffect(() => {
     socket.on("receive_message", (data) => {
         setMessages((prev) => [...prev, data]);
+
     });
 
     return () => socket.off("receive_message");
@@ -102,7 +103,6 @@ function Chat() {
     };
 
     socket.emit("send_message", msgData);
-    setMessages((prev) => [...prev, msgData]);
     setMessage("");
   };
 
