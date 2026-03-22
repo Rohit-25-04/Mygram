@@ -52,7 +52,10 @@ e.preventDefault();
         Password: "",
         ConfirmPassword: "",
       });
-      alert("Signup Successful ✅, please login");
+       // 🔹 Wrap alert in setTimeout to let React state update first
+  setTimeout(() => {
+    alert("Signup Successful ✅, please login");
+  }, 0);
     }
     } catch (err) {
       console.log(err);
