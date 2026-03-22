@@ -30,7 +30,7 @@ app.use(express.json())
 
 // CORS for REST APIs
 app.use(cors({
-  origin: "https://mygram-88p6-obbx86ovf-rohit-25-04s-projects.vercel.app",
+  origin: "https://mygram-88p6.vercel.app",
   credentials: true,
 }));
  mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo atlas is connected"))
@@ -42,7 +42,7 @@ const server = createServer(app);
 // Socket.IO with proper CORS
 const io = new Server(server, {
   cors: {
-    origin: "https://mygram-88p6-obbx86ovf-rohit-25-04s-projects.vercel.app",
+    origin: "https://mygram-88p6.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   },
