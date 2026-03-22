@@ -20,14 +20,19 @@
 import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
+
 
 // CORS for REST APIs
 app.use(cors({
   origin: "https://mygram-88p6-obbx86ovf-rohit-25-04s-projects.vercel.app",
   credentials: true,
 }));
+ mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo atlas is connected"))
 
 const server = createServer(app);
 
